@@ -2,6 +2,8 @@
 
 # Tutorial followed 'https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react'
 
+# run 'git pull origin main' to update local git repo
+
 # ----- run django-todo-react backend -----
 # cd into 'django-todo-react'
 # run 'pip install pipenv'
