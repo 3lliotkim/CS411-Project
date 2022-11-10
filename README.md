@@ -5,6 +5,7 @@
 
 # ----- Getting Started -----
 # Clone or Run 'git pull origin main' to update local git repo
+# IGNORE NEXT PART IF NOT A NEW CLONE FROM GIT REPO continue to instructions on line 18 if looking to run site locally
 # cd into '/django-audiosky-react'
 # run 'pipenv shell' to start virtual environment
 # run 'pipenv install' to install dependencies
