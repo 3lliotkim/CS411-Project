@@ -8,6 +8,9 @@
 # cd into '/django-audiosky-react'
 # run 'pipenv shell' to start virtual environment
 # run 'pipenv install' to install dependencies
+# run 'pipenv install djangorestframework django-cors-headers'
+# cd into 'django-audiosky-react/backend'
+# run 'python manage.py migrate'
 # cd into '/django-audiosky-react/frontend'
 # run 'npm install' to install dependencies
 
