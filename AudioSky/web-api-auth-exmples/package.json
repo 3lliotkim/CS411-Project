@@ -8,6 +8,16 @@
     "express": "~4.16.0",
     "cors": "^2.8.4",
     "querystring": "~0.2.0",
-    "request": "~2.83.0"
-  }
+    "request": "~2.83.0",
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "morgan": "^1.10.0",
+    "prohairesis": "^1.2.5"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "license": "ISC"
 }
