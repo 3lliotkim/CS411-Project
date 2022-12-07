@@ -3,6 +3,9 @@ var request = require('request'); // "Request" library
 var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
+var morgan = require('morgan');
+var { Prohairesis } = require('prohairesis');
+var bodyParser = require('body-parser');
 
 var client_id = '4a52c05f75f34117bd2ce147c981b8cc'; // Your client id
 var client_secret = '915d776a72c24ed2929359599de59079'; // Your secret
@@ -26,6 +29,32 @@ var generateRandomString = function(length) {
 var stateKey = 'spotify_auth_state';
 
 var app = express();
+var port = process.env.PORT;
+
+const mySQLString='mysql://bd44e301068fc3:bd6016d1@us-cdbr-east-06.cleardb.net/heroku_481ef6d2cb7d903?reconnect=true';
+const database = new Prohairesis(mySQLString);
+
+app
+  .use(morgan('dev'))
+  .use(express.static('public'))
+
+  .use(bodyParser.urlencoded({ extended: false}))
+  .use(bodyParser.json())
+
+  .post('/api/user', async (req, res) => {
+    const body = req.body;
+
+    await database.execute(`
+      INSERT INTO User (
+        user_email
+      ) VALUES (
+        @userEmail
+      )
+    `, {
+        userEmail: body.email
+    });
+    res.end('Added email');
+  })
 
 app.use(express.static(__dirname + '/public'))
    .use(cors())

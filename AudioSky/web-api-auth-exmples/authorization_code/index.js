@@ -4,7 +4,7 @@ const { Prohairesis } = require('prohairesis');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8888;
 
 const mySQLString='mysql://bd44e301068fc3:bd6016d1@us-cdbr-east-06.cleardb.net/heroku_481ef6d2cb7d903?reconnect=true';
 const database = new Prohairesis(mySQLString);
@@ -32,4 +32,4 @@ app
         res.end('Added email');
     })
 
-    .listen(port, () => console.log('Server listening on port ${port}'));
+    .listen(port, () => console.log(`Server listening on port ${port}`));

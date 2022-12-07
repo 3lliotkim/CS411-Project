@@ -52,7 +52,12 @@
             <dt>Country</dt><dd>{{country}}</dd>
           </dl>
         </div>
+        <form action="/api/user" method="POST">
+          <input name="email" placeholder="Email" type="text" required/>
+          <button type="submit">Submit</button>
+        </form>
       </div>
+
     </script>
 
     <script id="oauth-template" type="text/x-handlebars-template">
