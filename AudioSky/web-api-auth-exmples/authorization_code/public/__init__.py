@@ -47,7 +47,7 @@ text = '''<!DOCTYPE html>
 <body>
     <h1>Today's Weather</h1>
     <p>Today looks like:</p>
-    <p>Temperature: {temp}</p>
+    <p>Temperature: {temp} F</p>
     <p>Wind Speed: {wind}</p>
     <p>Percentage of Cloudiness: {cl}</p>
     <p>Rain in Inches: {rain}</p>
