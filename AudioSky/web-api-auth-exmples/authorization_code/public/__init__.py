@@ -40,5 +40,26 @@ else:
 
 f = open(r"PATH ON YOUR PC", "r").read().format(
     temp = temperature, wind = windSpeed, cl = cloud, rain = percipitation)
+text = '''<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet" href= "style_weather.css">
+</head>
+<body>
+    <h1>Today's Weather</h1>
+    <p>Today looks like:</p>
+    <p>Temperature: {temp}</p>
+    <p>Wind Speed: {wind}</p>
+    <p>Percentage of Cloudiness: {cl}</p>
+    <p>Rain in Inches: {rain}</p>
+    <button>
+        <a type="button" class="b1" href="https://www.spotify.com">Get My Generated Playlist</a>
+    </button>
+    
+</body>
+</html>
+'''.format(temp = temperature, wind = windSpeed, cl = cloud, rain = percipitation)
+f.write(text)
+f.close()
 print(f)
 
