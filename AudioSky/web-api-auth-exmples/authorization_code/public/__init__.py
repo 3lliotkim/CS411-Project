@@ -38,8 +38,7 @@ else:
 #rain_txt = "Rain in Inches {rain} ".format(rain = precipitation)
 
 
-f = open(r"PATH ON YOUR PC", "w+").read().format(
-    temp = temperature, wind = windSpeed, cl = cloud, rain = percipitation)
+f = open(r"PATH ON YOUR PC", "w+")
 text = '''<!DOCTYPE html>
 <html>
 <head>
