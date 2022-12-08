@@ -24,7 +24,7 @@ else:
    
 html_table = playlist_displayed.to_html()
 
-f = open(r"PATH ON YOUR PC", "w+")
+f = open(r"PATH TO weather_page.html ON YOUR PC ", "w+")
 text = '''<!DOCTYPE html>
 <html>
 <head>
