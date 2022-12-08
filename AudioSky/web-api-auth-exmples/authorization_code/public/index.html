@@ -35,6 +35,11 @@
       </div>
     </div>
 
+    <script type="text/javascript">
+    function FbotonOn() {
+        document.getElementById('texto').innerHTML = "Thank you";
+    }</script>
+    
     <script id="user-profile-template" type="text/x-handlebars-template">
       <h1>Logged in as {{display_name}}</h1>
       <div class="media">
@@ -54,9 +59,12 @@
         </div>
         <div style="position: relative; text-align: center">
           <dt>Sign Up for our Newsletter</dt>
-          <form action="/api/user" method="POST">
+          <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+          
+          <form action="/api/user" method="POST" target="dummyframe" novalidate="novalidate">
             <input name="email" placeholder="Email" type="text" required/>
-            <button type="submit">Submit</button>
+            <button type="submit" onclick="FbotonOn();this.form.reset()">Submit</button>
+            <p id="texto"></p>
           </form>
         </div>
       </div>
