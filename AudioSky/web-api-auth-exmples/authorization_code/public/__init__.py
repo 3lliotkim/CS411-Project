@@ -40,9 +40,6 @@ text = '''<!DOCTYPE html>
 
     <p> How about these songs for today? </p>
     {playlist} 
-    <button>
-        <a type="button" class="b1" href="https://www.spotify.com">Get My Generated Playlist</a>
-    </button>
     
 </body>
 </html>
