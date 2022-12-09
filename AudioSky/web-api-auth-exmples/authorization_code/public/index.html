@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authorization Code flow with Spotify</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel = "stylesheet" type= "text/css" href= "style.css">
@@ -37,13 +38,35 @@
     function FbotonOn() {
         document.getElementById('texto').innerHTML = "Thank you";
     }</script>
-    
+
+    <script>
+      let subMenu = document.getElementById("subMenu");
+      function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }</script>
+  
     <script id="user-profile-template" type="text/x-handlebars-template">
-      <h1>Welcome {{display_name}}</h1>
-      <div class="media">
-        <div class="pull-right">
-          <img class="media-object" width="100" src="{{images.0.url}}"/>
-        </div>
+      <div class="hero">
+        <nav>
+          <h1 class="temp">AudioSky</h1>
+          <img src="{{images.0.url}}" class="user-pic" onclick="toggleMenu()">
+
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="{{images.0.url}}">
+                <h2>John Wick</h2>
+              </div>
+              <hr>
+              <a href="#" class="sub-menu-link">
+                <img src="images/404.jpg">
+                <p>Edit Profile</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+
+        </nav>
       </div>
       <button class="center">
         <a type="button" class="b1" href="weather_page.html">Check Weather</a>
@@ -141,6 +164,7 @@
         }
       })();
     </script>
+
   </body>
 </html>
 
