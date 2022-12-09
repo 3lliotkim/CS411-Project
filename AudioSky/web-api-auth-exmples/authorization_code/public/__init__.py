@@ -66,7 +66,7 @@ text = '''<!DOCTYPE html>
     {playlist}
     <br>
     <br>
-    <p> We reccommend these songs </p>
+    <p> We reccommend these songs. We think it fits the mood :) </p>
 
     {rec_playlist}
 </body>
