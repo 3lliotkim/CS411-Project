@@ -16,14 +16,23 @@ cloud = str(json["current"]["cloud"]) + " %"            #cloudy
 percipitation = str(json["current"]["precip_in"]) #rainy
 sunny = str(json["current"]["uv"])                #sunny 
 
-rand_int = random.randint(0,10)
-if(float(temperature) >= 70):
+rand_int = random.randint(0,5)
+if(float(temperature) >= 60):
     hot = True
 
 else:
     hot = False
+if rand_int ==1:
+    playlist_displayed = get_playlist('sanjanakasarla', '3CxO6BrNt182XoBqyspADP')
+if rand_int == 2:
+    playlist_displayed = get_playlist('spotify', '37i9dQZF1DX0XUsuxWHRQd')
+if rand_int ==3:
+    playlist_displayed = get_playlist('spotify', '37i9dQZF1DX10zKzsJ2jva')
+if rand_int == 4:
+    playlist_displayed = get_playlist('billboard', '6UeSakyzhiEt4NB3UAd6NQ')
+if rand_int == 5:
+    playlist_displayed = get_playlist('spotify', '37i9dQZF1DX9tPFwDMOaN1')
 
-playlist_displayed = get_playlist('sanjanakasarla', '3CxO6BrNt182XoBqyspADP')
 sad_playlist = playlist_displayed[playlist_displayed["Valence"] < .5]
 happy_playlist = playlist_displayed[playlist_displayed["Valence"] > .5]
 
@@ -34,14 +43,13 @@ happy_table = happy_playlist.to_html()
 
 if hot == True:
     rec_playlist = happy_table
-    #playlist_displayed = get_playlist('spotify', '37i9dQZF1EIgEWv28Tpoyq')
 if hot == False:
     rec_playlist = sad_table
-    #playlist_displayed = get_playlist('spotify', '37i9dQZF1DWSqBruwoIXkA')
 
 html_table = playlist_displayed.to_html()
 
-f = open(r"C:\Users\flore\OneDrive\Desktop\CS411\AudioSky\web-api-auth-examples\authorization_code\public\weather_page.html", "w+")
+
+f = open(r"PATH ON YOUR PC", "w+")
 text = '''<!DOCTYPE html>
 <html>
 <head>
