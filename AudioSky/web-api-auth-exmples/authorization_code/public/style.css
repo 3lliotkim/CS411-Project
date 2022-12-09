@@ -1,6 +1,6 @@
 
 h1 {
-    color: blueviolet;
+    color: black;
     text-align: center;
 }
 body{
@@ -27,8 +27,9 @@ img {
 .center {
     position: relative;
     padding: 5px 10px;
+    top: 0px;
     right:25%;
-    left:55%;
+    left:57%;
     margin-left:-150px;
 }
 
@@ -39,3 +40,12 @@ img {
     display: flex;
     justify-content: center;
   }
+
+.footery {
+    position: relative;
+    top: 300px;
+    right: 25%;
+    left: 55%;
+    margin-left: -150px;
+    z-index: 100;
+}
