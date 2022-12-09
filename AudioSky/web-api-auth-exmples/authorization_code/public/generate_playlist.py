@@ -16,5 +16,5 @@ def get_playlist(creator, id):
         playlist_features["Song"] = track["track"]["name"]
         track_df = pd.DataFrame(playlist_features, index = [0])
         playlist_df = pd.concat([playlist_df, track_df], ignore_index = True)
-    return playlist_df[:11]
+    return playlist_df[:31]
 
