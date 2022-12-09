@@ -1,9 +1,12 @@
 import requests
-from generate_playlsit import get_playlist
+from generate_playlist import get_playlist
 from IPython.display import HTML
+import random
+import pandas as pd
 url = "WEATHER API URL"
 
-hot = False
+
+hot = None
 playlist_displayed= ""
 response = requests.get(url)
 json = response.json()
@@ -13,18 +16,32 @@ cloud = str(json["current"]["cloud"]) + " %"            #cloudy
 percipitation = str(json["current"]["precip_in"]) #rainy
 sunny = str(json["current"]["uv"])                #sunny 
 
+rand_int = random.randint(0,10)
+if(float(temperature) >= 70):
+    hot = True
 
-if(float(sunny) >= 6):
-    hot == True
-      
-if hot == True:
-    sunny_txt = "UV" + sunny +  "Today is not very sunny"
 else:
-    playlist_displayed =get_playlist('spotify', '37i9dQZF1DWSqBruwoIXkA')
-   
+    hot = False
+
+playlist_displayed = get_playlist('sanjanakasarla', '3CxO6BrNt182XoBqyspADP')
+sad_playlist = playlist_displayed[playlist_displayed["Valence"] < .5]
+happy_playlist = playlist_displayed[playlist_displayed["Valence"] > .5]
+
+sad_table = sad_playlist.to_html()
+happy_table = happy_playlist.to_html()
+
+
+
+if hot == True:
+    rec_playlist = happy_table
+    #playlist_displayed = get_playlist('spotify', '37i9dQZF1EIgEWv28Tpoyq')
+if hot == False:
+    rec_playlist = sad_table
+    #playlist_displayed = get_playlist('spotify', '37i9dQZF1DWSqBruwoIXkA')
+
 html_table = playlist_displayed.to_html()
 
-f = open(r"PATH TO weather_page.html ON YOUR PC ", "w+")
+f = open(r"C:\Users\flore\OneDrive\Desktop\CS411\AudioSky\web-api-auth-examples\authorization_code\public\weather_page.html", "w+")
 text = '''<!DOCTYPE html>
 <html>
 <head>
@@ -37,14 +54,16 @@ text = '''<!DOCTYPE html>
     <p>Wind Speed: {wind}</p>
     <p>Percentage of Cloudiness: {cl}</p>
     <p>Rain in Inches: {rain}</p>
+    <p> These songs fit the mood? Too bad if you get sad! </p>
+    {playlist}
+    <br>
+    <br>
+    <p> We reccommend these songs </p>
 
-    <p> How about these songs for today? </p>
-    {playlist} 
-    
+    {rec_playlist}
 </body>
 </html>
-'''.format(temp = temperature, wind = windSpeed, cl = cloud, rain = percipitation, playlist = html_table)
+'''.format(temp = temperature, wind = windSpeed, cl = cloud, rain = percipitation, playlist = html_table, rec_playlist = rec_playlist)
 f.write(text)
 f.close()
 print(f)
-
