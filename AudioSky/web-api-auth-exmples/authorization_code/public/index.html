@@ -29,9 +29,6 @@
         <div id="oauth">
         </div>
         <div style="text-align: center">
-        <button>
-          <a type="button" class="b1" href="weather_page.html">Check Weather</a>
-        </button>
         </div>
       </div>
     </div>
@@ -59,21 +56,23 @@
           </dl>
         </div>
       </div>
+      <button class="center">
+        <a type="button" class="b1" href="weather_page.html">Check Weather</a>
+      </button>
+      <div class="footer">
+        <div>
+          <dt>Sign Up for our Newsletter</dt>
+          <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+          <form action="/api/user" method="POST" target="dummyframe" novalidate="novalidate">
+            <input name="email" placeholder="Email" type="text" required/>
+            <button type="submit" onclick="FbotonOn()">Submit</button>
+            <p id="texto"></p>
+        </form>
+        </div>
+      </div>
     </script>
 
-    <div class="manipulate">
-      <dt>Sign Up for our Newsletter</dt>
-      <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-      <form action="/api/user" method="POST" target="dummyframe" novalidate="novalidate">
-        <input name="email" placeholder="Email" type="text" required/>
-        <button type="submit" onclick="FbotonOn();this.form.reset()">Submit</button>
-        <p id="texto"></p>
-      </form>
-    </div>
-
-    <script id="oauth-template" type="text/x-handlebars-template">
-      
-    </script>
+    <script id="oauth-template" type="text/x-handlebars-template"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>

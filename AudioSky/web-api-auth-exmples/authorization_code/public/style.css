@@ -24,18 +24,18 @@ img {
     border-radius: 50%;
   }
 
-.manipulate {
-    position:relative;
-    width:300px;
-    height:300px;
-    bottom:-100px;
+.center {
+    position: relative;
+    padding: 5px 10px;
     right:25%;
     left:55%;
     margin-left:-150px;
 }
 
-.center {
-    padding: 70px 0;
-    text-align: center;
-}
-
+.footer {
+    position: fixed;
+    bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
