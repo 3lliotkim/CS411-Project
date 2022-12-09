@@ -16,7 +16,7 @@ cloud = str(json["current"]["cloud"]) + " %"            #cloudy
 percipitation = str(json["current"]["precip_in"]) #rainy
 sunny = str(json["current"]["uv"])                #sunny 
 
-rand_int = random.randint(0,5)
+rand_int = random.randint(1,5)
 if(float(temperature) >= 60):
     hot = True
 
