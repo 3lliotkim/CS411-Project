@@ -42,7 +42,7 @@
     }</script>
     
     <script id="user-profile-template" type="text/x-handlebars-template">
-      <h1>Logged in as {{display_name}}</h1>
+      <h1>Welcome {{display_name}}</h1>
       <div class="media">
         <div class="pull-right">
           <img class="media-object" width="100" src="{{images.0.url}}" />
@@ -61,7 +61,18 @@
       </div>
     </script>
 
+    <div class="manipulate">
+      <dt>Sign Up for our Newsletter</dt>
+      <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+      <form action="/api/user" method="POST" target="dummyframe" novalidate="novalidate">
+        <input name="email" placeholder="Email" type="text" required/>
+        <button type="submit" onclick="FbotonOn();this.form.reset()">Submit</button>
+        <p id="texto"></p>
+      </form>
+    </div>
+
     <script id="oauth-template" type="text/x-handlebars-template">
+      
     </script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>

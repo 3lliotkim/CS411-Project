@@ -19,3 +19,23 @@ body{
     font-size: 16px;
     border-radius: 12px;
 }
+
+img {
+    border-radius: 50%;
+  }
+
+.manipulate {
+    position:relative;
+    width:300px;
+    height:300px;
+    bottom:-100px;
+    right:25%;
+    left:55%;
+    margin-left:-150px;
+}
+
+.center {
+    padding: 70px 0;
+    text-align: center;
+}
+
