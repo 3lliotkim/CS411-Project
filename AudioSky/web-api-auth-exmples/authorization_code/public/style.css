@@ -8,14 +8,14 @@ body{
     background-color: #cccccc;
 }
     
-.button{
+.b1{
     background-color: #008CBA; 
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+
     font-size: 16px;
     border-radius: 12px;
 }
@@ -30,7 +30,9 @@ img {
 
 .center {
     position: relative;
-    padding: 5px 10px;
+    background-color: #008CBA;
+    border-radius: 12px;
+    padding: 17px 5px;
     top: 100px;
     right:25%;
     left:57%;

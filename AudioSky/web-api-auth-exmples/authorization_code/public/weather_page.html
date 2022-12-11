@@ -1,17 +1,487 @@
+<!DOCTYPE html>
 <html>
 <head>
     <link rel = "stylesheet" href= "style_weather.css">
 </head>
 <body>
     <h1>Today's Weather</h1>
-    <h2>Today looks like:</h2>
-    <h3>Temperature: {temp}</h3>
-    <h4>Wind Speed: {wind}</h4>
-    <h5>Percentage of Cloudiness: {cl}</h5>
-    <h6>Rain in Inches: {rain}</h6>
-    <button>
-        <a type="button" class="b1" href="https://www.spotify.com">Get My Generated Playlist</a>
-      </button>
-    
+    <p>Today looks like:</p>
+    <p>Temperature: 45.0 F</p>
+    <p>Wind Speed: 18.6 mph</p>
+    <p>Percentage of Cloudiness: 0 %</p>
+    <p>Rain in Inches: 0.0</p>
+    <p> These songs fit the mood? Too bad if you get sad! </p>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Song</th>
+      <th>Track ID</th>
+      <th>Valence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Polo G</td>
+      <td>My All</td>
+      <td>My All</td>
+      <td>2UQ2oUbHiB8wWYCE42JX0k</td>
+      <td>0.3730</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Moneybagg Yo</td>
+      <td>Quickie</td>
+      <td>Quickie</td>
+      <td>3084aAzars6DR26nCWO9Ep</td>
+      <td>0.3470</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Metro Boomin</td>
+      <td>HEROES &amp; VILLAINS</td>
+      <td>Superhero (Heroes &amp; Villains) [with Future &amp; Chris Brown]</td>
+      <td>0vjeOZ3Ft5jvAi9SBFJm1j</td>
+      <td>0.4920</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Lil Durk</td>
+      <td>Hanging With Wolves</td>
+      <td>Hanging With Wolves</td>
+      <td>1a7tOEheXeaSNathZW4Gzk</td>
+      <td>0.5000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A Boogie Wit da Hoodie</td>
+      <td>Me vs. Myself</td>
+      <td>Water (Drowning Pt. 2) [feat. Kodak Black]</td>
+      <td>6yDPFrHZLQbQa9Itd2J4Gp</td>
+      <td>0.4940</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Drake</td>
+      <td>Her Loss</td>
+      <td>Rich Flex</td>
+      <td>1bDbXMyjaUIooNwFE9wn0N</td>
+      <td>0.4240</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>SoFaygo</td>
+      <td>Pink Heartz</td>
+      <td>Hell Yeah</td>
+      <td>3QHGfxhjexLaMKGHXagfRs</td>
+      <td>0.2870</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Metro Boomin</td>
+      <td>HEROES &amp; VILLAINS</td>
+      <td>Niagara Falls (Foot or 2) [with Travis Scott &amp; 21 Savage]</td>
+      <td>4WuOWVnAqvEQxgSRrspBgt</td>
+      <td>0.2570</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Quavo</td>
+      <td>Only Built For Infinity Links</td>
+      <td>To The Bone (feat. YoungBoy Never Broke Again)</td>
+      <td>4wRJHXHDJnKSPr9IVn0BFR</td>
+      <td>0.5050</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Nas</td>
+      <td>One Mic, One Gun</td>
+      <td>One Mic, One Gun</td>
+      <td>7CpXFEjLntpr4GdOhTtFEv</td>
+      <td>0.4580</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Lil Uzi Vert</td>
+      <td>Just Wanna Rock</td>
+      <td>Just Wanna Rock</td>
+      <td>4FyesJzVpA39hbYvcseO2d</td>
+      <td>0.0385</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Lil Tecca</td>
+      <td>Blessing</td>
+      <td>Blessing</td>
+      <td>6DswwzQlABrNoqjNydtvuX</td>
+      <td>0.4960</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Drake</td>
+      <td>Her Loss</td>
+      <td>Pussy &amp; Millions (feat. Travis Scott)</td>
+      <td>2KLwPaRDOB87XOYAT2fgxh</td>
+      <td>0.4450</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Gucci Mane</td>
+      <td>Letter to Takeoff</td>
+      <td>Letter to Takeoff</td>
+      <td>7B09THlbQE2RndpgXeXQYE</td>
+      <td>0.3350</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Lil Baby</td>
+      <td>It's Only Me</td>
+      <td>California Breeze</td>
+      <td>6ug9fUi5oLLgQgOF1G8WkM</td>
+      <td>0.2150</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Central Cee</td>
+      <td>No More Leaks</td>
+      <td>One Up</td>
+      <td>6R6ZS5HYH4RdXkjEwEJO5R</td>
+      <td>0.7430</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Roddy Ricch</td>
+      <td>Twin (feat. Lil Durk)</td>
+      <td>Twin (feat. Lil Durk)</td>
+      <td>5B40Td13cDQ4adeAiLf8Z4</td>
+      <td>0.3260</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Metro Boomin</td>
+      <td>HEROES &amp; VILLAINS</td>
+      <td>Too Many Nights (feat. Don Toliver &amp; with Future)</td>
+      <td>2Hh3ETdQKrmSI3QS0hme7g</td>
+      <td>0.1560</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Blxst</td>
+      <td>Keep Calling</td>
+      <td>Keep Calling</td>
+      <td>44p5ZWDBSppOoABrxoH5jU</td>
+      <td>0.4870</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>YG</td>
+      <td>Miss My Dawgs</td>
+      <td>Miss My Dawgs (with Lil Wayne)</td>
+      <td>5fCBPjWjqaa0vuRO0ZRWPC</td>
+      <td>0.3830</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Young Dolph</td>
+      <td>Get Away</td>
+      <td>Get Away</td>
+      <td>65nmqAEqW7CJIkXOIkxyg8</td>
+      <td>0.2110</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Key Glock</td>
+      <td>PRE5L</td>
+      <td>Jigsaw</td>
+      <td>3Wqs6XFKsKcTjaWhmB8VCP</td>
+      <td>0.2540</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Finesse2tymes</td>
+      <td>90 Days</td>
+      <td>If You Still Wit Me (feat. Lil Baby)</td>
+      <td>4EvFzNPsp8iyiEO9LDHopv</td>
+      <td>0.4490</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>MOUNT WESTMORE</td>
+      <td>Free Game</td>
+      <td>Free Game</td>
+      <td>4a5J9U353e52exFOFPcMaZ</td>
+      <td>0.5660</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>GloRilla</td>
+      <td>Tomorrow 2 (with Cardi B)</td>
+      <td>Tomorrow 2 (with Cardi B)</td>
+      <td>7KXVIAuw3m2hxZanrpSXS3</td>
+      <td>0.6930</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Lil Baby</td>
+      <td>It's Only Me</td>
+      <td>Real Spill</td>
+      <td>4OkFBMU18NidtaefaTjUq1</td>
+      <td>0.2840</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Money Man</td>
+      <td>Blackout</td>
+      <td>Similar</td>
+      <td>46GyY53xkfMRYTqZAQ33ne</td>
+      <td>0.3820</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>NLE Choppa</td>
+      <td>Do It Again (feat. 2Rare)</td>
+      <td>Do It Again (feat. 2Rare)</td>
+      <td>5gAwpwuchaCGnJLlBMGBzp</td>
+      <td>0.7160</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Trippie Redd</td>
+      <td>Ain’t Safe (feat. Don Toliver)</td>
+      <td>Ain’t Safe (feat. Don Toliver)</td>
+      <td>6ja11GoXgF75QkEVqqAadn</td>
+      <td>0.5150</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Roddy Ricch</td>
+      <td>Stop Breathing</td>
+      <td>Stop Breathing</td>
+      <td>6mM8gri8d2abYYomjOV4ut</td>
+      <td>0.4560</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Lil Baby</td>
+      <td>It's Only Me</td>
+      <td>Not Finished</td>
+      <td>2A0G0bPmlkUXUbvWqrAXzg</td>
+      <td>0.0855</td>
+    </tr>
+  </tbody>
+</table>
+    <br>
+    <br>
+    <p> We reccommend these songs. We think it fits the mood :) </p>
+
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Song</th>
+      <th>Track ID</th>
+      <th>Valence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Polo G</td>
+      <td>My All</td>
+      <td>My All</td>
+      <td>2UQ2oUbHiB8wWYCE42JX0k</td>
+      <td>0.3730</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Moneybagg Yo</td>
+      <td>Quickie</td>
+      <td>Quickie</td>
+      <td>3084aAzars6DR26nCWO9Ep</td>
+      <td>0.3470</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Metro Boomin</td>
+      <td>HEROES &amp; VILLAINS</td>
+      <td>Superhero (Heroes &amp; Villains) [with Future &amp; Chris Brown]</td>
+      <td>0vjeOZ3Ft5jvAi9SBFJm1j</td>
+      <td>0.4920</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A Boogie Wit da Hoodie</td>
+      <td>Me vs. Myself</td>
+      <td>Water (Drowning Pt. 2) [feat. Kodak Black]</td>
+      <td>6yDPFrHZLQbQa9Itd2J4Gp</td>
+      <td>0.4940</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Drake</td>
+      <td>Her Loss</td>
+      <td>Rich Flex</td>
+      <td>1bDbXMyjaUIooNwFE9wn0N</td>
+      <td>0.4240</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>SoFaygo</td>
+      <td>Pink Heartz</td>
+      <td>Hell Yeah</td>
+      <td>3QHGfxhjexLaMKGHXagfRs</td>
+      <td>0.2870</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Metro Boomin</td>
+      <td>HEROES &amp; VILLAINS</td>
+      <td>Niagara Falls (Foot or 2) [with Travis Scott &amp; 21 Savage]</td>
+      <td>4WuOWVnAqvEQxgSRrspBgt</td>
+      <td>0.2570</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Nas</td>
+      <td>One Mic, One Gun</td>
+      <td>One Mic, One Gun</td>
+      <td>7CpXFEjLntpr4GdOhTtFEv</td>
+      <td>0.4580</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Lil Uzi Vert</td>
+      <td>Just Wanna Rock</td>
+      <td>Just Wanna Rock</td>
+      <td>4FyesJzVpA39hbYvcseO2d</td>
+      <td>0.0385</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Lil Tecca</td>
+      <td>Blessing</td>
+      <td>Blessing</td>
+      <td>6DswwzQlABrNoqjNydtvuX</td>
+      <td>0.4960</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Drake</td>
+      <td>Her Loss</td>
+      <td>Pussy &amp; Millions (feat. Travis Scott)</td>
+      <td>2KLwPaRDOB87XOYAT2fgxh</td>
+      <td>0.4450</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Gucci Mane</td>
+      <td>Letter to Takeoff</td>
+      <td>Letter to Takeoff</td>
+      <td>7B09THlbQE2RndpgXeXQYE</td>
+      <td>0.3350</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Lil Baby</td>
+      <td>It's Only Me</td>
+      <td>California Breeze</td>
+      <td>6ug9fUi5oLLgQgOF1G8WkM</td>
+      <td>0.2150</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Roddy Ricch</td>
+      <td>Twin (feat. Lil Durk)</td>
+      <td>Twin (feat. Lil Durk)</td>
+      <td>5B40Td13cDQ4adeAiLf8Z4</td>
+      <td>0.3260</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Metro Boomin</td>
+      <td>HEROES &amp; VILLAINS</td>
+      <td>Too Many Nights (feat. Don Toliver &amp; with Future)</td>
+      <td>2Hh3ETdQKrmSI3QS0hme7g</td>
+      <td>0.1560</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Blxst</td>
+      <td>Keep Calling</td>
+      <td>Keep Calling</td>
+      <td>44p5ZWDBSppOoABrxoH5jU</td>
+      <td>0.4870</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>YG</td>
+      <td>Miss My Dawgs</td>
+      <td>Miss My Dawgs (with Lil Wayne)</td>
+      <td>5fCBPjWjqaa0vuRO0ZRWPC</td>
+      <td>0.3830</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Young Dolph</td>
+      <td>Get Away</td>
+      <td>Get Away</td>
+      <td>65nmqAEqW7CJIkXOIkxyg8</td>
+      <td>0.2110</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Key Glock</td>
+      <td>PRE5L</td>
+      <td>Jigsaw</td>
+      <td>3Wqs6XFKsKcTjaWhmB8VCP</td>
+      <td>0.2540</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Finesse2tymes</td>
+      <td>90 Days</td>
+      <td>If You Still Wit Me (feat. Lil Baby)</td>
+      <td>4EvFzNPsp8iyiEO9LDHopv</td>
+      <td>0.4490</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Lil Baby</td>
+      <td>It's Only Me</td>
+      <td>Real Spill</td>
+      <td>4OkFBMU18NidtaefaTjUq1</td>
+      <td>0.2840</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Money Man</td>
+      <td>Blackout</td>
+      <td>Similar</td>
+      <td>46GyY53xkfMRYTqZAQ33ne</td>
+      <td>0.3820</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Roddy Ricch</td>
+      <td>Stop Breathing</td>
+      <td>Stop Breathing</td>
+      <td>6mM8gri8d2abYYomjOV4ut</td>
+      <td>0.4560</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Lil Baby</td>
+      <td>It's Only Me</td>
+      <td>Not Finished</td>
+      <td>2A0G0bPmlkUXUbvWqrAXzg</td>
+      <td>0.0855</td>
+    </tr>
+  </tbody>
+</table>
 </body>
 </html>
