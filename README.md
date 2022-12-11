@@ -1,4 +1,4 @@
-# CS411-Project
+# CS411-Project-AudioSky
 
 # ----- Getting Started -----
 # If repository exists on local device
