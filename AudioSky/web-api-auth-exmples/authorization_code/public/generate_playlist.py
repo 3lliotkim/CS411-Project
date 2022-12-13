@@ -17,8 +17,6 @@ def get_playlist(creator, id):
         playlist_features["Track ID"] = track["track"]["id"]
         audio_feature = sp.audio_features(playlist_features["Track ID"])[0]
         playlist_features["Valence"]= audio_feature["valence"]
-        # for feature in playlist_features:
-        #     playlist_features[feature]
         track_df = pd.DataFrame(playlist_features, index = [0])
         playlist_df = pd.concat([playlist_df, track_df], ignore_index = True)
 
